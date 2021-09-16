@@ -1,6 +1,37 @@
 function createMedalTable(medals) {
     // Parse the medal data to produce a medaltable
+
+    const choosePoints = (score) => {
+        switch(score) {
+            case '1': {
+                return 3;
+            }
+            case '2': {
+                return 2;
+            }
+            case '3': {
+                return 1
+            }
+        }
+    }
+    // Parse the medal data to produce a medaltable
+    const medalTable = {}
+
+    medals.forEach(({ podium }) => {
+        podium.forEach((country) => {
+            const [score,countryName] = country.split('.')
+
+            if (medalTable[countryName]) {
+                medalTable[countryName] = medalTable[countryName] + choosePoints(score)
+                return
+            }
+
+            medalTable[countryName] = choosePoints(score)
+
+        })
+    })
     // The winner gets 3 points, second place 2 points and third place 1 point
+    
     return
 }
 
