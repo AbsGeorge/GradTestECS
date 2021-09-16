@@ -4,7 +4,7 @@
   "description": "Use `git clone` to clone the repository locally, then change the remote, please do not fork this repository. To change the remote, use",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",

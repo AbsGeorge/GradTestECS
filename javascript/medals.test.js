@@ -31,7 +31,7 @@ function createMedalTable(medals) {
     })
     
     
-    return
+    return medalTable
 }
 
 describe("Medal Table Generator", () => {
